@@ -93,7 +93,7 @@
 	function queryBtcPrice() {
 		$.ajax({
 			type: 'GET',
-			url: 'https://api.bitcoinaverage.com/ticker/all',
+			url: 'https://api.coindesk.com/v1/bpi/currentprice.json',
 			dataType: 'json'
 		}).done(function (result) {
 			$('#btcprice').html('BTC Price: $' + result.USD['24h_avg']);
@@ -103,7 +103,7 @@
 	function queryWeather() {
 		$.ajax({
 			type: 'GET',
-			url: 'https://www.metaweather.com/api/location/' + woeid,
+			url: 'https://www.prevision-meteo.ch/services/json/lat=46.259lng=5.235' + woeid,
 			dataType: 'json'
 		}).done(function (result) {
 
